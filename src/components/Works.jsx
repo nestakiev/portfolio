@@ -2,7 +2,7 @@ import React from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { github } from "../assets";
+import { github, live } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
@@ -20,7 +20,7 @@ const ProjectCard = ({
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
         options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full h-full"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -38,7 +38,7 @@ const ProjectCard = ({
               }`}
             >
               <img
-                src={github}
+                src={live}
                 alt="live_page_link icon"
                 className="w-1/2 h-1/2 object-contain"
               />
