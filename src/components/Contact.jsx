@@ -116,9 +116,13 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary ml-auto mr-auto"
+            // className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary ml-auto mr-auto"
+            className="green-pink-gradient p-[1px] rounded-[20px] outline-none w-fit text-white font-bold shadow-card inline-block ml-auto mr-auto"
+
           >
+            <p className="bg-tertiary rounded-[20px] inline-block px-7 py-2 text-[20px] hover:text-[#915eff] transition duration-500 ease-in-out">
             {loading ? "Sending..." : "Send"}
+            </p>
           </button>
         </form>
       </motion.div>

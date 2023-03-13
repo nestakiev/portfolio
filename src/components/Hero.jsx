@@ -19,12 +19,17 @@ const Hero = () => {
             Hi, I'm <span className="text-[#915eff]">Vadym</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop user interfaces and web application
-            using JavaScript
+            I develop user interfaces and web application using JavaScript
           </p>
         </div>
       </div>
-      <ComputersCanvas />
+      {/* <ComputersCanvas /> */}
+
+      <div className="absolute top-[60%] xs:top-[55%] left-[50%] transform translate-y-[-50%] translate-x-[-50%] green-pink-gradient p-[1px] rounded-[20px] shadow-card overflow-hidden">
+        <a href="https://drive.google.com/file/d/1XC5NbB7En5Mr4eSDVUikpsqSem98GDEq/view?usp=sharing" target='_blank' className="bg-tertiary rounded-[20px] inline-block font-bold px-7 py-2 text-[20px] hover:text-[#915eff] transition duration-500 ease-in-out">
+          CV
+        </a>
+      </div>
 
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
