@@ -2,6 +2,9 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
@@ -17,6 +20,8 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
+  const notify = () => toast("Wow so easy!");
+
   const handleChange = (e) => {
     const { target } = e;
     const { name, value } = target;
@@ -29,7 +34,24 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
+    // setLoading(true);
+
+    if(form.name.trim().length === 0) {
+      toast.error('Please, enter your name')
+      return;
+    };
+
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if(!form.email.match(mailformat)) {
+      toast.error('Please, enter valid email')
+      return;
+    }; 
+
+    if(form.message.trim().length < 3) {
+      toast.error('Please, enter your message')
+      return;
+    };
 
     emailjs
       .send(
@@ -47,7 +69,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          toast.success('Thank you. I will get back to you as soon as possible.')
 
           setForm({
             name: "",
@@ -58,8 +80,7 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
+          toast.warning('Ahh, something went wrong. Please try again.')
         }
       );
   };
@@ -87,7 +108,7 @@ const Contact = () => {
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your good name?"
+              placeholder="What's your name?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
           </label>
@@ -118,10 +139,9 @@ const Contact = () => {
             type="submit"
             // className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary ml-auto mr-auto"
             className="green-pink-gradient p-[1px] rounded-[20px] outline-none w-fit text-white font-bold shadow-card inline-block ml-auto mr-auto"
-
           >
             <p className="bg-tertiary rounded-[20px] inline-block px-7 py-2 text-[20px] hover:text-[#915eff] transition duration-500 ease-in-out">
-            {loading ? "Sending..." : "Send"}
+              {loading ? "Sending..." : "Send"}
             </p>
           </button>
         </form>
@@ -133,6 +153,18 @@ const Contact = () => {
       >
         <EarthCanvas />
       </motion.div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 };
