@@ -47,7 +47,7 @@ const About = () => {
         in React and Gatsby has allowed me to create blazing-fast static
         websites that offer a seamless user experience. Additionally, I have
         experience with Node and have developed server-side applications that
-        handle complex logic and data processing. Here is my <a href="" target="_blank" className="font-bold">resume</a>.
+        handle complex logic and data processing. Here is my <a href="https://drive.google.com/file/d/1XC5NbB7En5Mr4eSDVUikpsqSem98GDEq/view?usp=sharing" target="_blank" className="font-bold hover:text-[#915eff] transition duration-500 ease-in-out">cv</a>.
             
       </motion.p>
       <div className="mt-20 flex flex-wrap gap-10 justify-center">
