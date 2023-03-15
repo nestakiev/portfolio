@@ -32,9 +32,6 @@ import goit from './company/goit.png';
 import leleka from './company/leleka.png';
 import uts from './company/uts.png';
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
 import phonebook from './phonebook.jpg';
 import bslhelp from './bslhelp.jpg';
 import bookreading from './bookreading.jpg';
@@ -69,9 +66,6 @@ export {
   shopify,
   starbucks,
   tesla,
-  carrent,
-  jobit,
-  tripguide,
   gatsby,
   sass,
   goit,
