@@ -127,17 +127,16 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Full-stack developer (education)",
-    company_name: "GoIT",
-    icon: goit,
+    title: "Front-end developer",
+    company_name: "Ukrtimespace",
+    icon: uts,
     iconBg: "#383E56",
-    date: "May 2022 - September 2022",
+    date: "December 2022 - Ferbuary 2023",
     points: [
-      "Learned best practices for building responsive and accessible user interfaces using HTML, CSS, and React.",
-      "Gained experience with Node.js and Express.js to build server-side applications and RESTful APIs.",
-      "Developed proficiency in MongoDB and NoSQL databases, including designing schemas and querying data.",
-      "Honed my skills in Git and version control, using it to collaborate with other developers and manage project codebases.",
-      "Have implemented security features, such as authentication and authorization, using tools like Passport.js and JSON Web Tokens (JWT).",
+      "Developing and maintaining web applications using Gatsby.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Troubleshooting and debugging issues that arise during development and testing.",
     ],
   },
   {
@@ -154,16 +153,17 @@ const experiences = [
     ],
   },
   {
-    title: "Front-end developer",
-    company_name: "Ukrtimespace",
-    icon: uts,
+    title: "Full-stack developer (education)",
+    company_name: "GoIT",
+    icon: goit,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "May 2022 - September 2022",
     points: [
-      "Developing and maintaining web applications using Gatsby.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Troubleshooting and debugging issues that arise during development and testing.",
+      "Learned best practices for building responsive and accessible user interfaces using HTML, CSS, and React.",
+      "Gained experience with Node.js and Express.js to build server-side applications and RESTful APIs.",
+      "Developed proficiency in MongoDB and NoSQL databases, including designing schemas and querying data.",
+      "Honed my skills in Git and version control, using it to collaborate with other developers and manage project codebases.",
+      "Have implemented security features, such as authentication and authorization, using tools like Passport.js and JSON Web Tokens (JWT).",
     ],
   },
 ];
@@ -198,8 +198,7 @@ const testimonials = [
 const projects = [
   {
     name: "Ukrtimespace",
-    description:
-      "Landing page for booking stream studio",
+    description: "Landing page for booking stream studio",
     tags: [
       {
         name: "gatsby",
@@ -220,8 +219,7 @@ const projects = [
   },
   {
     name: "Noble Generous Stork",
-    description:
-      "Landing pages about the volunteer fund",
+    description: "Landing pages about the volunteer fund",
     tags: [
       {
         name: "react",
@@ -303,7 +301,8 @@ const projects = [
       },
     ],
     image: bookreading,
-    source_code_link: "https://github.com/AlexanderDmitriev/FinalProjectReact-Node-Front",
+    source_code_link:
+      "https://github.com/AlexanderDmitriev/FinalProjectReact-Node-Front",
     live_page_link: "https://book-reading-43-9.netlify.app/",
   },
   {
